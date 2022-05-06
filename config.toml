@@ -5,5 +5,5 @@ startPage = "34cbfc89975540db8d001254552cc047"
 # CMS Configurations
 [cms]
 cacheDir = "cache"
-postsDir = "blog/content/posts"
+postsDir = "blog/content/post"
 imgDir = "blog/static/img"
