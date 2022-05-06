@@ -1,11 +1,11 @@
 #!/bin/bash
 #set -u -e -o pipefail
 
-GITHUB_ACTOR="lvntbkdmr"
+GITHUB_ACTOR="milkclouds"
 
 # setup git
-git config --global user.email "lvntbkdmr@gmail.com"
-git config --global user.name "Levent Bekdemir"
+git config --global user.email "milkclouds00@gmail.com"
+git config --global user.name "MilkClouds"
 git config --global github.user "${GITHUB_ACTOR}"
 git config --global github.token "${GH_TOKEN_OVERRIDE}"
 
@@ -21,4 +21,4 @@ if [ "$?" -ne "0" ]; then
     exit 0
 fi
 set -e
-git push "https://${GITHUB_ACTOR}:${GH_TOKEN_OVERRIDE}@github.com/lvntbkdmr/NotiGoCMS.git" master || true
+git push "https://${GITHUB_ACTOR}:${GH_TOKEN_OVERRIDE}@github.com/milkclouds/NotiGoCMS.git" master || true

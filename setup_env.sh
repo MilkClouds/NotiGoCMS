@@ -1,18 +1,16 @@
 #!/bin/bash
 #set -u -e -o pipefail
 
-GITHUB_ACTOR="lvntbkdmr"
+GITHUB_ACTOR="milkclouds"
 
 # setup git
-git config --global user.email "lvntbkdmr@gmail.com"
-git config --global user.name "Levent Bekdemir"
-git config --global github.user "${GITHUB_ACTOR}"
-git config --global github.token "${GH_TOKEN_OVERRIDE}"
+git config --global user.email "milkclouds00@gmail.com"
+git config --global user.name "MilkClouds"
 
 [ -d "blog" ] && git rm -r --cached blog
 rm -rf blog
 
-git submodule add --force https://github.com/lvntbkdmr/blog.git blog
+git submodule add --force "https://${GITHUB_ACTOR}:${GH_TOKEN_OVERRIDE}@github.com/milkclouds/blog.git" blog
 
 ./NotiGoCMS
 
@@ -30,5 +28,5 @@ if [ "$?" -ne "0" ]; then
     exit 0
 fi
 set -e
-git push "https://${GITHUB_ACTOR}:${GH_TOKEN_OVERRIDE}@github.com/lvntbkdmr/blog.git" master || true
+git push "https://${GITHUB_ACTOR}:${GH_TOKEN_OVERRIDE}@github.com/milkclouds/blog.git" master || true
 cd ../
